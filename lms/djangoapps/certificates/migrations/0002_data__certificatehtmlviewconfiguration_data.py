@@ -22,12 +22,13 @@ def forwards(apps, schema_editor):
             "logo_url": "http://www.example.com"
         },
         "honor": {
-            "certificate_type": "Honor Code",
-            "certificate_title": "Certificate of Achievement",
+            "certificateTitle": "Certificate of Achievement",
+            "certificateType": "Honor Code Bootstrap",
+            "documentBodyClassAppend": "is-honorcode"
         },
         "verified": {
             "certificate_type": "Verified",
-            "certificate_title": "Verified Certificate of Achievement",
+            "certificate_title": "Verified Certificate of Achievement"
         }
     }
     certificate_html_view_configuration_model = apps.get_model("certificates", "CertificateHtmlViewConfiguration")

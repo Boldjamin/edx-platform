@@ -71,32 +71,27 @@ class CertificateHtmlViewConfigurationFactory(DjangoModelFactory):
         model = CertificateHtmlViewConfiguration
 
     enabled = True
-    configuration = """{
-            "default": {
-                "accomplishment_class_append": "accomplishment-certificate",
-                "platform_name": "edX",
-                "company_about_url": "https://www.edx.org/about-us",
-                "company_privacy_url": "https://www.edx.org/edx-privacy-policy",
-                "company_tos_url": "https://www.edx.org/edx-terms-service",
-                "company_verified_certificate_url": "https://www.edx.org/verified-certificate",
-                "document_stylesheet_url_application": "/static/certificates/sass/main-ltr.css",
-                "logo_src": "/static/certificates/images/logo-edx.png",
-                "logo_url": "https://www.edx.org"
-            },
-            "honor": {
-                "certificate_type": "Honor Code",
-                "certificate_title": "Certificate of Achievement",
-                "logo_url": "https://www.edx.org/honor_logo.png"
-            },
-            "verified": {
-                "certificate_type": "Verified",
-                "certificate_title": "Verified Certificate of Achievement"
-            },
-            "xseries": {
-                "certificate_title": "XSeries Certificate of Achievement",
-                "certificate_type": "XSeries"
-            }
-        }"""
+    configuration = {
+        "default": {
+            "accomplishment_class_append": "accomplishment-certificate",
+            "platform_name": "Your Platform Name Here",
+            "company_about_url": "http://www.example.com/about-us",
+            "company_privacy_url": "http://www.example.com/privacy-policy",
+            "company_tos_url": "http://www.example.com/terms-service",
+            "company_verified_certificate_url": "http://www.example.com/verified-certificate",
+            "logo_src": "/static/certificates/images/logo.png",
+            "logo_url": "http://www.example.com"
+        },
+        "honor": {
+            "certificateTitle": "Certificate of Achievement",
+            "certificateType": "Honor Code Factory",
+            "documentBodyClassAppend": "is-honorcode"
+        },
+        "verified": {
+            "certificate_type": "Verified",
+            "certificate_title": "Verified Certificate of Achievement"
+        }
+    }
 
 
 class LinkedInAddToProfileConfigurationFactory(DjangoModelFactory):
